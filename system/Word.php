@@ -22,8 +22,8 @@ class Word {
 	 *
 	 * @param string $wordName Имя слова
 	 * @param int $operandsCount Размерность слова - число операндов, передаваемых слову
-	 * @param int $stackPopCount Эффект над стеком - сколько слов слово требует снять со стека
-	 * @param callback $callback Функция, реализующая слово
+	 * @param int $stackPopCount Эффект над стеком - сколько объектов слово требует снять со стека
+	 * @param callback $callback Функция, реализующая слово, должна возвращать либо null, либо массив из объектов, которые требуется положить на стек
 	 */
 	public function __construct($wordName, $operandsCount, $stackPopCount, $callback) {
 
