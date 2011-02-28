@@ -4,17 +4,18 @@ namespace FORTH\SYSTEM;
 
 abstract class Singleton {
 
-	protected static $_instance = null;
+	protected static $_instances = array();
 
 	protected function __construct() {
 	}
 
 	public static function getInstance() {
 
-		if ( is_null( static::$_instance ) )
-			static::$_instance = new static;
+		$class = \get_called_class();
+		if ( !isset( static::$_instances[$class] ) )
+			static::$_instances[$class] = new static;
 
-		return static::$_instance;
+		return static::$_instances[$class];
 
 	}
 
