@@ -11,7 +11,7 @@ class StandartDictionary {
 	/**
 	 * Инициализация стандартного словаря
 	 */
-	public function init() {
+	public static function init() {
 
 		$dict = Dictionary::getInstance();
 
