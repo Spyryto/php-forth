@@ -14,3 +14,9 @@ $dataForQueue = $parser->makeQueue();
 
 $queue = SYSTEM\Queue::getInstance();
 $queue->loadArray($dataForQueue);
+
+$stack = SYSTEM\Stack::getInstance();
+
+$executor = SYSTEM\Executor::getInstance();
+$executor->setStack($stack);
+$executor->execute($queue);
