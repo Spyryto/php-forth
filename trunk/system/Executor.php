@@ -53,7 +53,6 @@ class Executor extends Singleton {
 							$this->stack->push($res);
 						}
 					}
-
 					break;
 
 				default:
