@@ -45,4 +45,28 @@ class Word {
 		return $this->wordName;
 	}
 
+	/**
+	 *
+	 * @return int Размерность слова
+	 */
+	public function getOperandsCount() {
+		return $this->operandsCount;
+	}
+
+	/**
+	 *
+	 * @return int Эффект над стеком
+	 */
+	public function getStackPopCount() {
+		return $this->stackPopCount;
+	}
+
+	/**
+	 *
+	 * @return callback Функция - код слова
+	 */
+	public function getCallback() {
+		return $this->callback;
+	}
+
 }
